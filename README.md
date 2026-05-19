@@ -1,2 +1,5 @@
-# MultimodalModel
-多模态模型训练流程学习
+# PythonLearning
+
+模型训练流程
+
+pytorch学习
