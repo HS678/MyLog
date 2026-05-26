@@ -1,0 +1,16 @@
+system:
+  num_client: 20                     # 客户端总数量  100 改为 20
+  num_local_class: 4              # 每个客户端本地数据的类别数（模拟Non-IID分布）  2 改为 4
+  dataset: "MNIST"               # 使用的数据集名称
+  model: "LeNet"                  # 使用LeNet卷积神经网络模型
+  i_seed: 235235                  # 随机种子，确保实验可重复
+  num_round: 200              # 联邦学习总轮数 2000 改为 200
+  res_root: "results"             # 结果保存的根目录
+
+client:
+  fed_algo: "FedAvg"          # 使用FedAvg联邦平均算法
+  lr: 0.01                               # 学习率
+  batch_size: 32                  # 批次大小  64 改为 32
+  num_local_epoch: 2        # 每个客户端本地训练轮数   3 改为 2
+  momentum: 0.9              # 优化器动量
+  num_worker: 0               # 数据加载的工作进程数   2 改为 0
